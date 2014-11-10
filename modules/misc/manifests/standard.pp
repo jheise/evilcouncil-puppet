@@ -16,4 +16,7 @@ class misc::standard {
     package{ "tmux":
     }
 
+    package{ "screen":
+    }
+
 }
