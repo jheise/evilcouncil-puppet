@@ -6,4 +6,4 @@ rundir=/var/run/puppet
 factpath=$vardir/lib/facter
 pluginsync=true
 templatedir=$confdir/templates
-modulepath = /etc/puppet/content/modules
+modulepath = /etc/puppet/modules
