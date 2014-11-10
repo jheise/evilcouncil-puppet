@@ -1,3 +1,3 @@
 #!/bin/sh
-cd /etc/puppet/content
+cd /etc/puppet/
 git pull
