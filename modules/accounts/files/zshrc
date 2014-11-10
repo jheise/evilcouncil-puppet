@@ -1,0 +1,22 @@
+PATH=/bin:/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:~/bin:/usr/games/bin:/opt/puppet/bin:/opt/puppet/sbin:/usr/local/git/bin
+PS1="%m:%1/%# "
+set -o vi
+alias vi="/usr/bin/vim"
+alias more="less"
+alias hogs="du -cks * | sort -rn | head -11"
+HISTSIZE=2000
+SAVEHIST=2000
+HISTFILE=~/.zhistory
+export EDITOR=/usr/bin/vim
+export SVN_EDITOR=/usr/bin/vim
+
+autoload -U compinit
+compinit
+
+function perlmodver {
+    perl -M$1 -e 'print "Version " . $ARGV[0]->VERSION . " of " . $ARGV[0] . " is installed.\n"' $1
+}
+
+#function precmd {
+#	echo -n ${(l:$COLUMNS:::):-}
+#}
