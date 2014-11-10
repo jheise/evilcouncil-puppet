@@ -11,26 +11,26 @@ class os::ubuntu {
         path => ["/bin","/sbin","/usr/bin/","/usr/sbin","/usr/local/bin","/usr/local/sbin"],
     }
 
-    class { 'ruby':
-        version => latest,
-        gems_version => latest,
-        require => Exec["/usr/local/bin/update.sh"]
-    }
+    #class { 'ruby':
+        #version => latest,
+        #gems_version => latest,
+        #require => Exec["/usr/local/bin/update.sh"]
+    #}
 
-    package { "ruby1.9.1-dev":
-        ensure => latest,
-        require => Exec["/usr/local/bin/update.sh"]
-    }
+    #package { "ruby1.9.1-dev":
+        #ensure => latest,
+        #require => Exec["/usr/local/bin/update.sh"]
+    #}
 
-    package { "sqlite3":
-        ensure => installed,
-        require => Exec["/usr/local/bin/update.sh"]
-    }
+    #package { "sqlite3":
+        #ensure => installed,
+        #require => Exec["/usr/local/bin/update.sh"]
+    #}
 
-    package { "libsqlite3-ruby":
-        ensure => installed,
-        require => [Package["sqlite3"],Class["ruby"]]
-    }
+    #package { "libsqlite3-ruby":
+        #ensure => installed,
+        #require => [Package["sqlite3"],Class["ruby"]]
+    #}
 
     package { "python-software-properties":
         ensure => installed,
