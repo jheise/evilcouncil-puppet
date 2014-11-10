@@ -36,4 +36,10 @@ class os::ubuntu {
         ensure => installed,
         require => Exec["/usr/local/bin/update.sh"]
     }
+
+    package { "traceroute":
+        ensure => "latest",
+        require => Exec["/usr/local/bin/update.sh"]
+    }
+
 }
