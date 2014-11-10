@@ -1,18 +1,19 @@
 class misc::standard {
+    Package{
+        ensure => "Latest",
+        require => Class["os"]
+    }
 
     package{ "mosh":
-        ensure => "latest",
-        require => Class["os"]
     }
 
     package{ "vim":
-        ensure => "latest",
-        require => Class["os"]
     }
 
     package{ "irssi":
-        ensure => "latest",
-        require => Class["os"]
+    }
+
+    package{ "tmux":
     }
 
 }
