@@ -1,6 +1,6 @@
 class misc::standard {
     Package{
-        ensure => "Latest",
+        ensure => "latest",
         require => Class["os"]
     }
 
