@@ -25,6 +25,14 @@ class accounts::jubei {
 		require => File["/home/jubei/.ssh"]
 	}
 
+    ssh_authorized_key { "jubei-rsa":
+        ensure => present,
+        type => "ssh-rsa",
+        user => "jubei",
+        key => "AAAAB3NzaC1yc2EAAAADAQABAAABAQCSkgAXyXvxAZyHe7FfyACxnvoXDY2zFSSor8d2edGuSq+tYzjqv8wjZBZf71H6t8wipIObcV5j63P0b22HVKSKvhyGa20ua9PGDWoeH97TXJWRXkgo1xaCybbVGUoeUFtneusZaMk4c6vFmgRxe0BWhbzI0HMzgzX65lI4SG/Opas6TfkPb7MW5KOXb6k1x8kMEFw4ZNPZ/j0858my6ch1SIN+vMmLCKt82f1jDVVYrNtvyzvFnbcUmVOM3abatQWTqYGvXwidhuwUZb/6TFxq4rl9AbAfmnMPotbok8dR7gt5/aoyqeNZ8FWFW84YjR4Bp2fIBPy/hfG2QbVi6BkB",
+        require => File["/home/jubei/.ssh"]
+    }
+
 	ssh_authorized_key { "jubei-pubkey-ipad":
 		ensure => present,
 		type => "ssh-dss",
