@@ -74,4 +74,10 @@ class accounts::jubei {
 		require => File["/home/jubei"]
 	}
 
+    ssh_authorized_key { "ipad-mini":
+        ensure => present,
+        type => "ecdsa-sha2-nistp521",
+        key => "AAAAE2VjZHNhLXNoYTItbmlzdHA1MjEAAAAIbmlzdHA1MjEAAACFBAA/Vjz+HSy4E/Tchv2Pz0q+jBT5vqBRJPXluf/yoUtbmHM9U/MXSaVCl/LihIYTItNYXfGv/1A7XS7uQWF9FsgBqgFP6co17kOMBYRx9BqMOqYEr3DZqZ5YS6cbBHhIUBHXtruoP9PvDxImV4H9CyarvH3aT41ijFPTkBZLv6kPGr6uJw=="
+    }
+
 }
