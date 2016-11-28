@@ -80,4 +80,11 @@ class accounts::jubei {
         key => "AAAAE2VjZHNhLXNoYTItbmlzdHA1MjEAAAAIbmlzdHA1MjEAAACFBAA/Vjz+HSy4E/Tchv2Pz0q+jBT5vqBRJPXluf/yoUtbmHM9U/MXSaVCl/LihIYTItNYXfGv/1A7XS7uQWF9FsgBqgFP6co17kOMBYRx9BqMOqYEr3DZqZ5YS6cbBHhIUBHXtruoP9PvDxImV4H9CyarvH3aT41ijFPTkBZLv6kPGr6uJw=="
     }
 
+    ssh_authorized_key { "wintermute":
+        ensure => present,
+        type => "ssh-ed25519",
+        user => "jubei",
+        key => "AAAAC3NzaC1lZDI1NTE5AAAAILsdoFS4jbXziQcc0aNjdumK8BgCgf8m1B9sgY97Mk6f",
+	require => File["/home/jubei/.ssh"]
+    }
 }
