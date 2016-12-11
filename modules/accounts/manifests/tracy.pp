@@ -25,4 +25,12 @@ class accounts::tracy {
 		require => File["/home/tracy/.ssh"]
 	}
 
+    ssh_authorized_key { "tracy-pubkey-2":
+		ensure => present,
+		type => "ssh-rsa",
+		user => "tracy",
+		key => "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDu2306jjEeWEmBoWB4eRT1bg/ZC+RMUD2RmGrhgDy6gvB0gQ69eZ/dF2gl5x5HEuiIdcPmn65fMeKOYVhmjJvL3M2yaotFndKSdAAkSENQW5Zb/rR2ko3hjG7IU/Xd831Yao6XMk8jsqaFJ2jzpxydmWH0MOkr56LyZQLMFuR2aonTzq9aNyPWh+Br1bAVf7/UvbpUAqHJrrlMCd7OsmM5TSeFmIlNThKEXb0ma8obfeQHQJYAXoCg5+IYE4WF4CTUEpzYHhMvaH8kGa4QEbFdwsArhVVc2l1n2JGbyZOsnVWz6uwHj1vJ27RLuRzwXFFndWQ3Mu+Km7VwGjyFg/ip",
+		require => File["/home/tracy/.ssh"]
+	}
+
 }
