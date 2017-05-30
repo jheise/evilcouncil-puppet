@@ -88,4 +88,11 @@ class accounts::jubei {
         key => "AAAAC3NzaC1lZDI1NTE5AAAAILsdoFS4jbXziQcc0aNjdumK8BgCgf8m1B9sgY97Mk6f",
 	require => File["/home/jubei/.ssh"]
     }
+
+    ssh_authorized_key { "wintermute-rsa":
+        ensure => present,
+        type => "ssh-rsa",
+        user => "jubei",
+        key => "AAAAB3NzaC1yc2EAAAADAQABAAABAQC0O5MWLRslh9ectEfnqN76v+ex0yaTpDEcp+fNPcZRWXzkbiYT5Z3IjSdG4xuL62ZnX6uPeudcJDfFp8TFOEu6RWDimACzWp96inVILBq7S5PP7+v0KQ/X3KEamy5RpcQLYMKGieLPLDuCLv9mRlUFI13WLJFO1vq9rojl9/c+A1Ocu+ENO8dYS7mzSb29Ib3n68uHC3vbLrpfwzHhHKqj2VP8ds4IAuINabK/kG1NEPUAoP5IQtIG0croa3BXaUmgNlvHIcFRNozo7SRsOhcrq/dUHvDh580+KARUp4x2EWDQ8bvI2AANAtYcaIils6nXy2VDEcTzUkcwl08byfYj"
+    }
 }
