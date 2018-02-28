@@ -101,7 +101,7 @@ class accounts::jubei {
         ensure => present,
         type => "ssh-rsa",
         user => "jubei",
-        key => "AAAAB3NzaC1yc2EAAAADAQABAAABAQCdd1mcXJJAMcNFl6yu2LinK1lDCvr+GNaLnpe6kmFQ+/d10s+0IJPlh06jobmBAH92QuYbP9aYSFWGXyb8Ku77KRvZfDG5Jse88h5U58L+JGeYa+/fTPPHIoLcl5PV0ZAfvM4FwTnFcdKwb29riVgwtS0IueD2SL36X7ShsEkamMttJwmYx1++2Teqx7v5j0Rc25K7OR9ylQy383kbt1NCScRqJPMkCP98zrsMETtAlynYqtoh3/fGa445CytU1973jN14cTnBrcwHnA6BOsVGigTdfviqcSZsFHMBZD9U9SQvfXx6LQvHcWZ6KAzFMIyQcmYkV5AqWSPHhuCsjU3f",
+        key => "AAAAB3NzaC1yc2EAAAADAQABAAABAQDjmTSkFLNbVUyGML4DAC7KaqdOpvQqc63JWYVQoM/m4og608S6kdgn1vzRRNrCO/O316V9NGUMzNQamRPLrLALSZ7DMb8V6FRRmD4myDXiRn4F/wuvt4r/LE4Tzx/pYYK88mp+JhJtLdnJcl6kMbtYMhTDcsTR1HURRh8hCezWjyOtEWcdr83NlTiXKbFAUiOUTC6xKHTGJTcwuQV8FLh8/d7sunI48QAXq+9a+tuEtTls3+hbrHVZfprVtMa7ZNkupj1uBjPZJsIsaIiNGRdEP3AddpBgnGeFX2Q35Oo0tLh8gzdQD9CnOkh/IbExR1bnMLRD06OUAFsPw/DrYM4f",
         require => File["/home/jubei/.ssh"]
     }
 }
